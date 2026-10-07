@@ -1,6 +1,6 @@
 #pragma once
-#include <cassert>;
-#include <cmath>;
+#include <cassert>
+#include <cmath>
 // Return the number of seconds later that a time in seconds
 // time_2 is than a time in seconds time_1.
 double seconds_difference(double, double );
@@ -29,3 +29,6 @@ double get_seconds(int);
 // Return time at UTC+0, where utc_offset is the number of hours away from
 // UTC + 0.
 double time_to_utc(int, double );
+
+// Return UTC time in time zone utc_offset.
+double time_from_utc(int utc_offset, double time);
