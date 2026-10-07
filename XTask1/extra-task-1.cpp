@@ -33,28 +33,46 @@ double to_24_hour_clock(double hours)
     double frac_part = modf(hours, &int_part);         
     return static_cast<double>(static_cast<int>(int_part) % 24) + frac_part;
 }
-//
-///*
-//    Implement three functions
-//        * get_hours
-//        * get_minutes
-//        * get_seconds
-//    They are used to determine the hours part, minutes part and seconds part 
-//    of a time in seconds. E.g.:
-//
-//    >>> get_hours(3800)
-//    1
-//
-//    >>> get_minutes(3800)
-//    3
-//
-//    >>> get_seconds(3800)
-//    20
-//
-//    In other words, if 3800 seconds have elapsed since midnight, 
-//    it is currently 01:03:20 (hh:mm:ss).
-//*/
-//
+
+
+/*
+    Implement three functions
+        * get_hours
+        * get_minutes
+        * get_seconds
+    They are used to determine the hours part, minutes part and seconds part 
+    of a time in seconds. E.g.:
+
+    >>> get_hours(3800)
+    1
+
+    >>> get_minutes(3800)
+    3
+
+    >>> get_seconds(3800)
+    20
+
+    In other words, if 3800 seconds have elapsed since midnight, 
+    it is currently 01:03:20 (hh:mm:ss).
+*/
+// Return the hours that have elapsed since midnight;
+double get_hours(int seconds)
+{
+    return (seconds / 3600) % 24;
+}
+
+// Return the minutes that have elapsed since midnight;
+double get_minutes(int seconds)
+{
+    return (seconds % 3600) / 60;
+}
+
+// Return the seconds that have elapsed since midnight;
+double get_seconds(int seconds)
+{
+    return seconds % 60;
+}
+
 //double time_to_utc(int utc_offset, double time)
 //{
 //    /*

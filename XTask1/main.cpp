@@ -24,30 +24,10 @@ int main()
     assert(to_24_hour_clock(25)==1);
     assert(to_24_hour_clock(4)==4);
     assert(to_24_hour_clock(28.5)==4.5);
-    /*
-        hours is a number of hours since midnight. Return the
-        hour as seen on a 24-hour clock.
 
-        Precondition: hours >= 0
+    assert(get_hours(3800) == 1);
+    assert(get_minutes(3800) == 3);
+    assert(get_seconds(3800) == 20);
 
-        >>> to_24_hour_clock(24)
-        0
-
-        >>> to_24_hour_clock(48)
-        0
-
-        >>> to_24_hour_clock(25)
-        1
-
-        >>> to_24_hour_clock(4)
-        4
-
-        >>> to_24_hour_clock(28.5)
-        4.5
-
-        You may wish to inspect various function in <cmath> to work
-        with integer and fractional part of a hours separately.
-
-    */
 
 }

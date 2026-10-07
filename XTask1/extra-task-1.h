@@ -16,3 +16,12 @@ double to_float_hours(int, int,int );
 // Hours is a number of hours since midnight. Return the
 // hour as seen on a 24 - hour clock.
 double to_24_hour_clock(double);
+
+// Return the hours that have elapsed since midnight;
+double get_hours(int);
+
+// Return the minutes that have elapsed since midnight;
+double get_minutes(int);
+
+// Return the seconds that have elapsed since midnight;
+double get_seconds(int);
