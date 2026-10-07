@@ -25,3 +25,7 @@ double get_minutes(int);
 
 // Return the seconds that have elapsed since midnight;
 double get_seconds(int);
+
+// Return time at UTC+0, where utc_offset is the number of hours away from
+// UTC + 0.
+double time_to_utc(int, double );
